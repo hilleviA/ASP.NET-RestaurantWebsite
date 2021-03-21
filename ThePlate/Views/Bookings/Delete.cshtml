@@ -1,0 +1,40 @@
+﻿@model ThePlate.Models.Booking
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<section class="infoSection sectionWidth">
+    <h2>Överblick</h2>
+    <div class="detailView">
+        <h3>Bokning</h3>
+        <h4>@Html.DisplayNameFor(model => model.FirstName)</h4>
+        <p>@Html.DisplayFor(model => model.FirstName) </p>
+
+        <h4>@Html.DisplayNameFor(model => model.LastName)</h4>
+        <p>@Html.DisplayFor(model => model.LastName) </p>
+
+        <h4>@Html.DisplayNameFor(model => model.Email)</h4>
+        <p>@Html.DisplayFor(model => model.Email)</p>
+
+        <h4>@Html.DisplayNameFor(model => model.PhoneNumber)</h4>
+        <p>@Html.DisplayFor(model => model.PhoneNumber)</p>
+
+        <h4>@Html.DisplayNameFor(model => model.Date)</h4>
+        <p>@Html.DisplayFor(model => model.Date)</p>
+
+        <h4>@Html.DisplayNameFor(model => model.DinnerTime)</h4>
+        <p>@Html.DisplayFor(model => model.DinnerTime)</p>
+
+        <h4>@Html.DisplayNameFor(model => model.guestAmount)</h4>
+        <p>@Html.DisplayFor(model => model.guestAmount)</p>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="BookingId" />
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+        </form>
+        <a asp-action="Index">Tillbaka</a>
+    </div>
+
+    
+    </section>

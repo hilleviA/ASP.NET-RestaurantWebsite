@@ -1,0 +1,96 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Redressed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Grand+Hotel&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/style.css" />
+    <title>@ViewData["Title"] - The Plate</title>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="logo">
+                <h1><a asp-area="" asp-controller="Home" asp-action="Index">The Plate</a></h1>
+            </div>
+            <nav id="mainMenu">
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+
+                <ul class="links">
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="Index">Start</a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="Breakfast">Helgfrukost</a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="AfternoonTea">Afternoon Tea</a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="ALaCarte">A la Carté</a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="Dishes" asp-action="Index">Meny</a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="Contact">Kontakt</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        @RenderBody()
+
+        <footer>
+            <div>
+                <h4>The plate</h4>
+                <p>Sjölundsgatan 38</p>
+                <p>78954 Sjölunda</p>
+                <p>010-53-08</p>
+                <p>info@plateit.com</p>
+            </div>
+            <div>
+                <h4>Måndag-Fredag</h4>
+                <p>11:00 - 23:00</p>
+                <h4>Lördag-Söndag</h4>
+                <p>09:00 - 23:00 </p>
+
+            </div>
+            <div>
+                <h4>Länkar</h4>
+                <p><a href="#">Facebook</a></p>
+                <p><a href="#">Instagram</a></p>
+
+            </div>
+            <div>
+                <!-- Visar länk till booking om besökaren är inloggad-->
+                <h4>Administration</h4>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                   <a asp-area="" asp-controller="Bookings" asp-action="Index">Hantera Bokningar</a>
+                }
+                <partial name="_LoginPartial" />
+            </div>
+
+    </footer>
+    </div><!-- END WRAPPER-->
+    <!-- DEFAULT JS-FILES-->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <!-- PERSONAL JS-FILE-->
+    <script src="~/js/main.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

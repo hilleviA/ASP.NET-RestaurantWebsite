@@ -1,0 +1,537 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #f58b0a;
+}
+a:visited {
+    color: #f58b0a; 
+}
+
+img{
+    width: 100%;
+}
+
+body {
+    font-family: Raleway, Arial, Sans-serif;
+}
+
+p {
+    font-size: 0.9em;
+    line-height: 1.4em;
+}
+
+h1 {
+    font-size: 2.2em;
+}
+h2 {
+    font-size: 2.3em;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#wrapper {
+    max-width: 1980px;
+    width: 100%;
+    margin: 0 auto; 
+}
+
+/* CLASSES */
+
+.text-danger {
+    color: darkred;
+}
+
+.sectionWidth {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.button {
+    padding: 8px 12px; 
+    font-size: 0.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 6px;
+    border: 2px solid #f58b0a;
+    background-color: #FFF;
+    color:#040400;  
+}
+
+.button:hover {
+    background-color:#f58b0a;
+    color: #FFF;
+}
+
+.crudLinks {
+    color: #f58b0a;
+    
+}
+
+.crudLinks:visited {
+    color: #f58b0a;
+   
+}
+.crudLinks:hover {
+    text-decoration: underline;
+}
+
+
+/* FORM */
+input[type=text], textarea {
+    width: 70%;
+    padding: 8px 12px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: Raleway, Arial, sans-serif;
+}
+
+input[type=password] {
+    width: 70%;
+    padding: 8px 12px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+input[type=email] {
+    width: 70%;
+    padding: 8px 12px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+input[type=number] {
+    width: 70%;
+    padding: 8px 12px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+input[type=datetime-local] {
+    width: 70%;
+    padding: 8px 12px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+input[type=checkbox] {
+    padding: 8px 12px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+input[type=submit] {
+    padding: 8px 12px;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 6px;
+    border: 2px solid #f58b0a;
+    background-color: #FFF;
+    color: #040400;
+}
+
+input[type=submit]:hover {
+    background-color: #f58b0a;
+    color: #FFF;
+}
+
+/* TABLE */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+    background-color: #f7f4e6;
+}
+ tr:hover {
+    background-color: #ddd;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #f58b0a;
+    color: white;
+}
+
+
+
+
+/* HEADER */
+#logo {
+    color: #FFF;
+    padding-bottom: 3px;
+    margin: 0 30px 10px 10px;
+    font-family: 'Permanent Marker', cursive;
+    border-bottom: 2px solid #f58b0a; 
+    letter-spacing: 0.125em;
+}
+#logo a {
+    color: #FFF;
+}
+
+header {
+    padding: 10px 0;
+    background-color: #121211; 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+#mainMenu {
+        width: 70%;      
+}
+
+
+#mainMenu ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: auto;
+
+}
+
+#mainMenu ul li {
+    font-size: 0.8em;
+    letter-spacing: 0.125em;
+    font-weight: 600;
+}
+
+#mainMenu ul li a {
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+#mainMenu ul li a:hover {
+    color: #f58b0a;
+}
+
+/*FOOTER*/ 
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #121211;
+    color: #FFF;
+    padding: 50px;
+    line-height: 1.8em;
+}
+
+footer div {
+    width: 25%;
+}
+
+footer div p a {
+    color: #FFF;
+    text-decoration: underline;
+}
+
+footer div p a:hover {
+    color: #f58b0a;
+}
+
+/* BANNER */
+
+#banner {
+    background-image: url("/images/banner_img.png");
+    background-size: cover;
+
+}
+
+#bannerText {
+    text-align: center;
+    color: #FFF;
+    margin: 0 auto;
+    padding: 225px 0;
+}
+
+#bannerText h2 {
+    font-family: Redressed, cursive;
+    margin-bottom: 20px;
+    font-size: 5em;
+}
+
+/* OFFERS */
+#offers h2 {
+    text-align: center;
+    margin: 70px 0;
+
+}
+#offers div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 100px;
+
+}
+
+#offers article {
+    width: 25%;
+}
+#offers article img {
+    width: 100%;
+}
+
+#offers article p {
+    margin-bottom: 20px;
+}
+
+
+/* BOOKING */
+
+#booking h2 {
+    text-align: center;
+    margin: 70px 0;
+}
+
+#booking div {
+    padding: 70px;
+    width: 70%;
+    margin: 0 auto;
+    background-color: #f7f4e6; 
+    margin-bottom: 100px;
+}
+
+#booking div p {
+    margin-bottom: 20px;
+}
+
+
+  /* INFO VIEWS */
+
+
+  .infoSection main{
+    width: 70%;
+    margin:  auto;
+
+}
+.infoSection main h2{
+    text-align: center;
+    margin: 70px auto;
+}
+.infoSection h2{
+    text-align: center;
+    margin: 70px auto;
+}
+
+.infoSection main img{
+    margin-top: 70px;  
+}
+
+/* CONTACT */
+
+#contact {
+    background-color:#f7f4e6;
+    margin: 100px auto;
+    padding: 50px;
+}
+#contact h3 {
+    text-align: center;
+    margin: 20px auto 20px;
+}
+
+#contact form {
+    margin: 30px auto;
+}
+
+#contact p {
+    margin-bottom: 20px;
+}
+
+
+
+/* FOODMENU */
+
+#foodMenu {
+    background-color: #f7f4e6;
+    padding: 50px;
+    margin-top: 100px;
+}
+
+#createNew {
+    margin-bottom: 50px;
+    margin-left: 40px;
+}
+
+#foodMenu h2 {
+    font-family: Redressed, cursive;
+    margin: 0 0 50px 0;
+}
+
+.menuItem {
+    padding: 10px;
+    background-color: #FFF;
+    margin: 10px auto; 
+    width: 90%;
+}
+
+.menuItem h3 {
+    font-family: Redressed, cursive;
+}
+
+.price {
+    font-weight: 600; 
+}
+
+/* CRUD FORMS */
+
+.crudForm {
+    width: 70%;
+    margin: 50px auto;
+    background-color: #f7f4e6;
+    padding: 20px;
+}
+
+.crudForm h2{
+    text-align: left;
+}
+
+.backLink {
+    margin: 50px auto;
+}
+.detailView {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+#confirmation {
+    margin: 100px auto;
+}
+
+#confirmation a {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+
+
+/* MEDIAQUERIES */
+
+@media only screen and (max-width: 850px) {
+
+    /* MENY */
+    #mainMenu {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+    }
+
+    .links {
+        background-color: rgb(18, 18, 17, 0.9);
+        position: fixed;  
+        flex-direction: column;
+        font-size: 1.3em;
+        height: 70vh;
+        width: 100%;
+        top:0;
+        right:0;
+        clip-path: circle(100px at 100% -50%);
+        -webkit-clip-path: circle(100px at 100% -50%);
+        transition: all 0.5s ease-out;
+    }
+
+    .links li  {
+        z-index: 2;
+    }
+
+    .links.open {
+        clip-path: circle(1000px at 100% -50%);
+        -webkit-clip-path: circle(1000px at 100% -50%);
+    }
+    .links.close {
+        clip-path: circle(100px at 100% -50%);
+        -webkit-clip-path: circle(100px at 100% -50%);
+    }
+
+    .hamburger {
+        position: fixed;
+        cursor: pointer;
+        right: 3%;
+        top: 3%;
+        z-index: 3;
+    }
+        
+    .line {
+        width: 40px;
+        height: 5px;
+        background-color: #FFFFFF;
+        margin: 6px;
+        border-radius: 2.5px;
+    }
+
+    /* BOOKING */
+
+    #booking div {
+        padding: 70px 5%;
+        width: 90%;
+    }
+
+    footer div {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+
+    #foodMenu {
+        width: 95%;
+    }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    #offers div {
+        display: block;
+        margin-bottom: 100px;
+    }
+    
+    #offers article {
+        width: 95%;
+        margin: 50px auto;
+    }
+
+    #foodMenu {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+     
+    .menuItem {
+        width: 95%;
+
+    }
+}
+

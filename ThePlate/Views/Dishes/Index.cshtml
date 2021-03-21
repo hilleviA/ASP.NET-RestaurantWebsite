@@ -1,0 +1,54 @@
+﻿@model IEnumerable<ThePlate.Models.Dish>
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "Meny";
+}
+
+<div>
+    <img src="/images/alacarte_banner.png" alt="Dukat bord på resturang">
+</div>
+<section class="infoSection sectionWidth">
+    <h2>Våra maträtter</h2>
+    <main id="foodMenu">
+        <h2>A la Carté Meny</h2>
+
+        @if (SignInManager.IsSignedIn(User))
+        {
+        <p id="createNew"><a  class="button" asp-action="Create">Lägg till ny maträtt</a></p>
+        }
+
+        @foreach (var item in Model)
+        {
+            <div class="menuItem">
+            <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
+            <p>@Html.DisplayFor(modelItem => item.Description)</p>
+            <p class="price">@Html.DisplayFor(modelItem => item.Price)kr</p>
+
+            @if (SignInManager.IsSignedIn(User))
+            {
+                <div>
+                    <a class="crudLinks" asp-action="Edit" asp-route-id="@item.DishId">Edit</a> |
+                    <a class="crudLinks" asp-action="Details" asp-route-id="@item.DishId">Details</a> |
+                    <a class="crudLinks" asp-action="Delete" asp-route-id="@item.DishId">Delete</a>
+                </div>
+            }
+            </div>
+    }
+
+    </main>
+</section>
+<section id="booking" class="sectionWidth">
+    <h2>Boka bord</h2>
+    <div>
+        <h3>Hungrig och sugen på att äta hos? </h3>
+        <p>Följ länken för att boka bord så ser vi till att du får en härlig upplevelse</p>
+        <a asp-area="" asp-controller="Bookings" asp-action="Create" class="button">Boka bord</a>
+    </div>
+</section>
+
+
+
+

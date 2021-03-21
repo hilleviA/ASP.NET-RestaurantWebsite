@@ -1,0 +1,26 @@
+﻿@model ThePlate.Models.Dish
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<section class="infoSection sectionWidth">
+    <div class="detailView">
+        <h3>Är du säker på att du vill ta bort denna maträtt?</h3>
+        <h4>@Html.DisplayNameFor(model => model.Name)</h4>
+        <p>@Html.DisplayFor(model => model.Name) </p>
+
+        <h4>@Html.DisplayNameFor(model => model.Description)</h4>
+        <p>@Html.DisplayFor(model => model.Description) </p>
+
+        <h4>@Html.DisplayNameFor(model => model.Price)</h4>
+        <p>@Html.DisplayFor(model => model.Price)</p>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="DishId" />
+            <input type="submit" value="Ta bort" class="btn btn-danger" />
+        </form>
+        <a class="crudLinks" asp-action="Index">Tillbaka till menyn</a>
+    </div>
+
+    </section>

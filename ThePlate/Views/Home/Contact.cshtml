@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Kontakt";
+}
+
+<div>
+    <img src="/images/contact_banner.png" alt="Dukat bord på resturang">
+</div>
+<section class="infoSection sectionWidth">
+    <h2>Kontakta oss</h2>
+    <main id="contact">
+        <h3>Boka bord</h3>
+        <p>Vill du boka bord följ länken nedan</p>
+        <a asp-area="" asp-controller="Bookings" asp-action="Create" class="button">Boka bord</a>
+        <h3>Andra funderingar?</h3>
+        <p>Har du några andra funderingar eller bara vill komma i kontakt med oss använd formuläret nedan. </p>
+        <form>
+            <label for="subject>">Ämne:</label><br />
+            <input type="text" id="subject" placeholder="Ämne" name="text"><br />
+            <label for="mail">E-mail:</label><br />
+            <input type="text" id="mail" placeholder="Din e-mail" name="mail"><br />
+            <label for="message">Meddelande</label><br />
+            <textarea id="message" placeholder="Meddelande" rows="8"></textarea><br />
+            <input type="submit" value="Skicka">
+        </form>
+    </main>
+</section>

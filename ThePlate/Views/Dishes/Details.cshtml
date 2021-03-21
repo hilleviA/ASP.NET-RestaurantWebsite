@@ -1,0 +1,25 @@
+﻿@model ThePlate.Models.Dish
+
+@{
+    ViewData["Title"] = "Detaljer";
+}
+
+<section class="infoSection sectionWidth">
+    <div class="detailView">
+        <h3>Detaljer</h3>
+        <h4>@Html.DisplayNameFor(model => model.Name)</h4>
+        <p>@Html.DisplayFor(model => model.Name) </p>
+
+        <h4>@Html.DisplayNameFor(model => model.Description)</h4>
+        <p>@Html.DisplayFor(model => model.Description) </p>
+
+        <h4>@Html.DisplayNameFor(model => model.Price)</h4>
+        <p>@Html.DisplayFor(model => model.Price)</p>
+
+    </div>
+    <div class="backLink">
+        <a class="crudLinks"  asp-action="Edit" asp-route-id="@Model.DishId">Redigera</a> |
+        <a class="crudLinks"  asp-action="Index">Tillbaka till menyn</a>
+    </div>
+
+</section>

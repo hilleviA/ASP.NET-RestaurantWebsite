@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Start";
+}
+
+<section id="banner">
+    <div id=bannerText>
+        <h2>Time to dine?</h2>
+        <a asp-area="" asp-controller="Dishes" asp-action="Index" class="button">Till menyn </a>
+    </div>
+</section>
+
+<section id="offers" class="sectionWidth">
+    <h2>Vad erbjuder vi?</h2>
+    <div>
+        <article>
+            <img src="images/carte_mini.png" alt="Tallrik med mat">
+            <h3>À la carte</h3>
+            <p>Här finner du fantastisk mat i våran pribelönta resturang i en stämningsfull och intim miljö. </p>
+            <a asp-area="" asp-controller="Home" asp-action="ALaCarte" class="button">Läs mer</a>
+        </article>
+        <article>
+            <img src="images/breakfast_mini.png" alt="Smörgås">
+            <h3>Helgfrukost</h3>
+            <p>Missa inte våran fantastiska frukostbuffé lördagar och söndagar mellan klockan 09:00-12:00</p>
+            <a asp-area="" asp-controller="Home" asp-action="Breakfast" class="button">Läs mer</a>
+        </article>
+        <article>
+            <img src="images/afternoon_mini.png" alt="Tekopp">
+            <h3>Afternoon Tea</h3>
+            <p>Den första helgen varje månad serverar vi Afternoon Tea i tesalongen på övervåning. Missa inte detta. </p>
+            <a asp-area="" asp-controller="Home" asp-action="AfternoonTea" class="button">Läs mer</a>
+        </article>
+    </div>
+</section>
+<section id="booking" class="sectionWidth">
+    <h2>Boka bord</h2>
+    <div>
+        <h3>Hungrig och sugen på att äta hos? </h3>
+        <p>Följ länken för att boka bord så ser vi till att du får en härlig upplevelse</p>
+        <a asp-area="" asp-controller="Bookings" asp-action="Create" class="button">Boka bord</a>
+    </div>
+</section>

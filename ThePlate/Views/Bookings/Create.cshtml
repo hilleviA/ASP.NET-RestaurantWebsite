@@ -1,0 +1,56 @@
+﻿@model ThePlate.Models.Booking
+
+@{
+    ViewData["Title"] = "Boka bord";
+}
+<section class="infoSection sectionWidth">
+    <h2>Boka bord</h2>
+    <form class="crudForm" asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="FirstName" class="control-label"></label><br />
+            <input asp-for="FirstName" class="form-control" /><br />
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="LastName" class="control-label"></label><br />
+            <input asp-for="LastName" class="form-control" /><br />
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Email" class="control-label"></label><br />
+            <input asp-for="Email" class="form-control" /><br />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="PhoneNumber" class="control-label"></label><br />
+            <input asp-for="PhoneNumber" class="form-control" /><br />
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Date" class="control-label"></label><br />
+            <input asp-for="Date" class="form-control" /><br />
+            <span asp-validation-for="Date" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="DinnerTime" class="control-label"></label><br />
+            <input asp-for="DinnerTime" class="form-control" /><br />
+            <span asp-validation-for="DinnerTime" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="guestAmount" class="control-label"></label><br />
+            <input asp-for="guestAmount" class="form-control" /><br />
+            <span asp-validation-for="guestAmount" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Boka" />
+        </div>
+    </form>
+    <div class="backLink">
+        <a class="crudLinks" asp-controller="Home" asp-action="Index">Tillbaka till start</a>
+    </div>
+</section>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
